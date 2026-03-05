@@ -18,7 +18,7 @@ const PartnersSection = () => {
             Branduri care ne-au acordat <span className="text-gradient">încrederea lor</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Am colaborat cu branduri din industrii diverse — de la retail și fashion până la food & beverage și tech.
+            Am colaborat cu branduri din industrii diverse — de la retail și fashion până la food & beverage.
           </p>
         </motion.div>
 
