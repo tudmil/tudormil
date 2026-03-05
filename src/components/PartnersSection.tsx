@@ -32,7 +32,7 @@ const PartnersSection = () => {
           <img
             src={partnersImg}
             alt="Partenerii noștri — Carrefour, TEX, Strongbow, Brico Depot, Estée Lauder, Rasova, Moldova în Bucate, M. Marquise, Fashion Drop, Edita Lupea, Centro Moda, Trickshot, GameOn, EraVault"
-            className="w-full max-w-4xl opacity-60 hover:opacity-80 transition-opacity duration-500 brightness-0 invert"
+            className="w-full max-w-4xl mix-blend-screen opacity-80 hover:opacity-100 transition-opacity duration-500"
           />
         </motion.div>
       </div>
