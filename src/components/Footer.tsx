@@ -5,7 +5,7 @@ const Footer = () => (
         FLARE<span className="text-gradient">.</span>
       </p>
       <p className="text-xs text-muted-foreground">
-        © 2026 Flare Studio. All rights reserved.
+        © 2026 Flare Studio. Toate drepturile rezervate.
       </p>
       <div className="flex gap-6 text-sm text-muted-foreground">
         <a href="#" className="hover:text-foreground transition-colors">Instagram</a>

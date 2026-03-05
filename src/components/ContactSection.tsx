@@ -8,7 +8,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll be in touch soon.");
+    toast.success("Mesaj trimis! Te vom contacta în curând.");
     setForm({ name: "", email: "", message: "" });
   };
 
@@ -22,20 +22,20 @@ const ContactSection = () => {
             viewport={{ once: true }}
           >
             <p className="text-primary font-display text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-              Let's Talk
+              Hai să Vorbim
             </p>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Ready to create something{" "}
-              <span className="text-gradient">extraordinary</span>?
+              Pregătit să creăm ceva{" "}
+              <span className="text-gradient">extraordinar</span>?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Tell us about your brand, your goals, and your timeline. 
-              We'll craft a custom production plan that fits.
+              Spune-ne despre brandul tău, obiectivele tale și termenele limită. 
+              Vom crea un plan de producție personalizat.
             </p>
             <div className="space-y-4 text-sm text-muted-foreground">
               <p>hello@flare.studio</p>
-              <p>+1 (212) 555-0147</p>
-              <p>New York · Los Angeles · London</p>
+              <p>+40 (21) 555-0147</p>
+              <p>București · Cluj-Napoca · Timișoara</p>
             </div>
           </motion.div>
 
@@ -49,7 +49,7 @@ const ContactSection = () => {
           >
             <input
               type="text"
-              placeholder="Your name"
+              placeholder="Numele tău"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               required
@@ -57,14 +57,14 @@ const ContactSection = () => {
             />
             <input
               type="email"
-              placeholder="Email address"
+              placeholder="Adresa de email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               required
               className="w-full bg-secondary border border-border rounded-sm px-5 py-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
             />
             <textarea
-              placeholder="Tell us about your project"
+              placeholder="Spune-ne despre proiectul tău"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               required
@@ -75,7 +75,7 @@ const ContactSection = () => {
               type="submit"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-display font-semibold text-sm hover:opacity-90 transition-opacity glow-shadow w-full justify-center"
             >
-              Send Message <ArrowRight size={16} />
+              Trimite Mesajul <ArrowRight size={16} />
             </button>
           </motion.form>
         </div>

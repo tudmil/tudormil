@@ -6,21 +6,21 @@ import workStrategy from "@/assets/work-strategy.jpg";
 const projects = [
   {
     image: workPhoto,
-    title: "Fashion Editorial",
-    category: "Photo Production",
-    description: "Campaign shoot for luxury brand launch across Instagram & TikTok.",
+    title: "Editorial de Modă",
+    category: "Producție Foto",
+    description: "Ședință foto pentru lansarea unui brand de lux pe Instagram și TikTok.",
   },
   {
     image: workVideo,
-    title: "Urban Reels Series",
-    category: "Short-Form Video",
-    description: "30-day content sprint generating 12M+ organic views.",
+    title: "Serie de Reels Urbane",
+    category: "Video Short-Form",
+    description: "Sprint de conținut de 30 de zile cu peste 12M vizualizări organice.",
   },
   {
     image: workStrategy,
-    title: "Content Strategy",
-    category: "Creative Direction",
-    description: "Full-service social strategy for emerging DTC brands.",
+    title: "Strategie de Conținut",
+    category: "Direcție Creativă",
+    description: "Strategie completă de social media pentru branduri DTC emergente.",
   },
 ];
 
@@ -35,10 +35,10 @@ const WorkSection = () => {
           className="mb-16"
         >
           <p className="text-primary font-display text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-            Selected Work
+            Lucrări Selectate
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold">
-            Content that commands attention
+            Conținut care captează atenția
           </h2>
         </motion.div>
 
