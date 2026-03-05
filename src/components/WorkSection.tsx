@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import workPhoto from "@/assets/work-photo.jpg";
+import workFashion from "@/assets/work-fashion.jpg";
 import workVideo from "@/assets/work-video.jpg";
 import workStrategy from "@/assets/work-strategy.jpg";
 
 const projects = [
   {
-    image: workPhoto,
+    image: workFashion,
     title: "Editorial de Modă",
     category: "Producție Foto",
     description: "Ședință foto pentru lansarea unui brand de lux pe Instagram și TikTok.",
