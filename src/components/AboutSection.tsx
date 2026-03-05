@@ -8,8 +8,8 @@ const AboutSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
+            
             <p className="text-primary font-display text-sm font-semibold tracking-[0.3em] uppercase mb-4">
               Despre Flare
             </p>
@@ -17,15 +17,15 @@ const AboutSection = () => {
               Creați pentru{" "}
               <span className="text-gradient">economia creatorilor</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Suntem un colectiv de fotografi, videografi și strategi 
-              care trăiesc și respiră social media. Fiecare conținut pe care îl producem 
-              este conceput să performeze — nu doar să arate bine.
+            <p className="text-muted-foreground leading-relaxed mb-6">Suntem un colectiv de fotografi, videografi și editori pasionați de social media. Fiecare proiect pe care îl realizăm este gândit să capteze atenția și să creeze impact real — nu doar să arate bine.
+
+
+
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              De la startup-uri ambițioase până la branduri globale, am ajutat peste 85 de companii 
-              să construiască prezențe memorabile pe Instagram, TikTok, YouTube Shorts 
-              și nu numai.
+            <p className="text-muted-foreground leading-relaxed">Am colaborat cu diverse branduri, de la startup-uri în creștere până la companii consacrate, ajutându-le să construiască prezențe vizuale memorabile și să comunice eficient cu publicul lor.
+
+
+
             </p>
           </motion.div>
 
@@ -33,18 +33,18 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
-          >
+            className="grid grid-cols-2 gap-4">
+            
             {[
-              { label: "Fondată", value: "2021" },
-              { label: "Echipa", value: "24" },
-              { label: "Orașe", value: "BUC · CJ · TM" },
-              { label: "Platforme", value: "IG · TT · YT" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="bg-card border border-border rounded-sm p-6"
-              >
+            { label: "Fondată", value: "2021" },
+            { label: "Echipa", value: "24" },
+            { label: "Orașe", value: "BUC · CJ · TM" },
+            { label: "Platforme", value: "IG · TT · YT" }].
+            map((item) =>
+            <div
+              key={item.label}
+              className="bg-card border border-border rounded-sm p-6">
+              
                 <p className="text-2xl font-display font-bold text-gradient">
                   {item.value}
                 </p>
@@ -52,12 +52,12 @@ const AboutSection = () => {
                   {item.label}
                 </p>
               </div>
-            ))}
+            )}
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
