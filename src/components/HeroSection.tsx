@@ -50,27 +50,6 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-border pt-10"
-        >
-          {[
-            { number: "200+", label: "Proiecte Livrate" },
-            { number: "50M+", label: "Vizualizări Generate" },
-            { number: "85+", label: "Parteneri de Brand" },
-            { number: "98%", label: "Retenție Clienți" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl md:text-4xl font-display font-bold text-gradient">
-                {stat.number}
-              </p>
-              <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
