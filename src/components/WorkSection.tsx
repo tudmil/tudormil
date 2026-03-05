@@ -1,23 +1,33 @@
 import { motion } from "framer-motion";
 import workFashion from "@/assets/work-fashion.jpg";
-import workVideo from "@/assets/work-video.jpg";
 import workStrategy from "@/assets/work-strategy.jpg";
 
-const projects = [
+interface Project {
+  type: "image" | "video";
+  src: string;
+  title: string;
+  category: string;
+  description: string;
+}
+
+const projects: Project[] = [
   {
-    image: workFashion,
+    type: "image",
+    src: workFashion,
     title: "Editorial de Modă",
     category: "Producție Foto",
     description: "Ședință foto pentru lansarea unui brand de lux pe Instagram și TikTok.",
   },
   {
-    image: workVideo,
+    type: "video",
+    src: "/videos/reels-urban.mp4",
     title: "Serie de Reels Urbane",
     category: "Video Short-Form",
     description: "Sprint de conținut de 30 de zile cu peste 12M vizualizări organice.",
   },
   {
-    image: workStrategy,
+    type: "image",
+    src: workStrategy,
     title: "Strategie de Conținut",
     category: "Direcție Creativă",
     description: "Strategie completă de social media pentru branduri DTC emergente.",
@@ -53,11 +63,22 @@ const WorkSection = () => {
               className="group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-sm aspect-[4/5] mb-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                {project.type === "video" ? (
+                  <video
+                    src={project.src}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <img
+                    src={project.src}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <p className="text-xs text-primary font-display font-semibold tracking-[0.2em] uppercase mb-1">
