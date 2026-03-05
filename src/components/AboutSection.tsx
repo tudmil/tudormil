@@ -33,7 +33,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4">
+            className="grid grid-cols-3 gap-4">
             
             {[
             { label: "Fondată", value: "2020" },
