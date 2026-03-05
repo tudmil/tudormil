@@ -36,10 +36,10 @@ const AboutSection = () => {
             className="grid grid-cols-2 gap-4">
             
             {[
-            { label: "Fondată", value: "2021" },
+            { label: "Fondată", value: "2020" },
             { label: "Echipa", value: "24" },
-            { label: "Orașe", value: "BUC · CJ · TM" },
-            { label: "Platforme", value: "IG · TT · YT" }].
+            { label: "ȚARA", value: "ROMÂNIA" },
+            { label: "Platforme", value: "IG · TT · FB · YT" }].
             map((item) =>
             <div
               key={item.label}
