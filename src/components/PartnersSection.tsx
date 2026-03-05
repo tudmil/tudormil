@@ -27,13 +27,16 @@ const PartnersSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="flex justify-center"
+          className="w-full bg-white py-8 -mx-4 px-4 md:-mx-0 md:px-0"
+          style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)', paddingLeft: '1rem', paddingRight: '1rem' }}
         >
-          <img
-            src={partnersImg}
-            alt="Partenerii noștri — Carrefour, TEX, Strongbow, Brico Depot, Estée Lauder, Rasova, Moldova în Bucate, M. Marquise, Fashion Drop, Edita Lupea, Centro Moda, Trickshot, GameOn, EraVault"
-            className="w-full max-w-4xl mix-blend-screen opacity-80 hover:opacity-100 transition-opacity duration-500"
-          />
+          <div className="max-w-4xl mx-auto">
+            <img
+              src={partnersImg}
+              alt="Partenerii noștri — Carrefour, TEX, Strongbow, Brico Depot, Estée Lauder, Rasova, Moldova în Bucate, M. Marquise, Fashion Drop, Edita Lupea, Centro Moda, Trickshot, GameOn, EraVault"
+              className="w-full"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
