@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
+  { label: "Portofoliu", href: "#work" },
+  { label: "Servicii", href: "#services" },
+  { label: "Despre Noi", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -33,7 +33,7 @@ const Navbar = () => {
             href="#contact"
             className="bg-primary text-primary-foreground px-5 py-2 rounded-sm text-sm font-semibold hover:opacity-90 transition-opacity"
           >
-            Start a Project
+            Începe un Proiect
           </a>
         </div>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
                 className="bg-primary text-primary-foreground px-5 py-3 rounded-sm text-sm font-semibold text-center"
                 onClick={() => setOpen(false)}
               >
-                Start a Project
+                Începe un Proiect
               </a>
             </div>
           </motion.div>

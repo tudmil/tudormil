@@ -11,21 +11,21 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <p className="text-primary font-display text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-              About Flare
+              Despre Flare
             </p>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Built for the{" "}
-              <span className="text-gradient">creator economy</span>
+              Creați pentru{" "}
+              <span className="text-gradient">economia creatorilor</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              We're a collective of photographers, videographers, and strategists 
-              who live and breathe social media. Every piece of content we produce 
-              is designed to perform — not just look pretty.
+              Suntem un colectiv de fotografi, videografi și strategi 
+              care trăiesc și respiră social media. Fiecare conținut pe care îl producem 
+              este conceput să performeze — nu doar să arate bine.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              From scrappy startups to global brands, we've helped over 85 companies 
-              build scroll-stopping presences across Instagram, TikTok, YouTube Shorts, 
-              and beyond.
+              De la startup-uri ambițioase până la branduri globale, am ajutat peste 85 de companii 
+              să construiască prezențe memorabile pe Instagram, TikTok, YouTube Shorts 
+              și nu numai.
             </p>
           </motion.div>
 
@@ -36,10 +36,10 @@ const AboutSection = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { label: "Founded", value: "2021" },
-              { label: "Team Size", value: "24" },
-              { label: "Cities", value: "NYC · LA · LDN" },
-              { label: "Platforms", value: "IG · TT · YT" },
+              { label: "Fondată", value: "2021" },
+              { label: "Echipa", value: "24" },
+              { label: "Orașe", value: "BUC · CJ · TM" },
+              { label: "Platforme", value: "IG · TT · YT" },
             ].map((item) => (
               <div
                 key={item.label}

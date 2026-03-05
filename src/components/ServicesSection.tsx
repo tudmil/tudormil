@@ -4,27 +4,27 @@ import { Camera, Video, Lightbulb, Sparkles } from "lucide-react";
 const services = [
   {
     icon: Camera,
-    title: "Photo Production",
+    title: "Producție Foto",
     description:
-      "Editorial & commercial photography optimized for social platforms. Product, lifestyle, and campaign shoots.",
+      "Fotografie editorială și comercială optimizată pentru platformele sociale. Ședințe de produs, lifestyle și campanie.",
   },
   {
     icon: Video,
-    title: "Short-Form Video",
+    title: "Video Short-Form",
     description:
-      "Reels, TikToks, and Shorts that stop the scroll. From concept to final cut, built for virality.",
+      "Reels, TikTok-uri și Shorts care opresc scroll-ul. De la concept la montaj final, create pentru viralitate.",
   },
   {
     icon: Lightbulb,
-    title: "Creative Direction",
+    title: "Direcție Creativă",
     description:
-      "Visual identity, mood boards, and content strategy tailored to your brand's voice and audience.",
+      "Identitate vizuală, mood board-uri și strategie de conținut adaptate vocii și publicului brandului tău.",
   },
   {
     icon: Sparkles,
-    title: "Content Strategy",
+    title: "Strategie de Conținut",
     description:
-      "Data-driven content calendars, trend analysis, and platform-specific optimization for maximum reach.",
+      "Calendare de conținut bazate pe date, analiză de trenduri și optimizare specifică fiecărei platforme.",
   },
 ];
 
@@ -39,10 +39,10 @@ const ServicesSection = () => {
           className="mb-16 text-center"
         >
           <p className="text-primary font-display text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-            What We Do
+            Ce Facem
           </p>
           <h2 className="text-4xl md:text-5xl font-display font-bold">
-            End-to-end production
+            Producție de la A la Z
           </h2>
         </motion.div>
 
