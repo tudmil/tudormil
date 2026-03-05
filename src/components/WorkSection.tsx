@@ -20,7 +20,7 @@ const projects: Project[] = [
   },
   {
     type: "video",
-    src: "/videos/reels-urban.mp4",
+    src: "/videos/reels-urban-v2.mp4",
     title: "Serie de Reels Urbane",
     category: "Video Short-Form",
     description: "Sprint de conținut de 30 de zile cu peste 12M vizualizări organice.",
