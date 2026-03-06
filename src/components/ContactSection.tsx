@@ -33,7 +33,7 @@ const ContactSection = () => {
               Vom crea un plan de producție personalizat.
             </p>
             <div className="space-y-4 text-sm text-muted-foreground">
-              <p>contact@gotconcept.ro</p>
+              <p>alexandru.craciun@gotconcept.ro</p>
               <p>+40 728 218 659</p>
               <p>
 </p>
