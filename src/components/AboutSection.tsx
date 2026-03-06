@@ -36,8 +36,8 @@ const AboutSection = () => {
             className="grid grid-cols-3 gap-4">
             
             {[
-            { label: "Fondată", value: "2020" },
-            { label: "ȚARA", value: "BUCUREȘTI" },
+            { label: "Fondată", value: "2021" },
+            { label: "ȚARA", value: "BUC" },
             { label: "Platforme", value: "IG · TT · FB · YT" }].
             map((item) =>
             <div
