@@ -1,15 +1,48 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Mesaj trimis! Te vom contacta în curând.");
-    setForm({ name: "", email: "", message: "" });
+
+    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+      toast.error("Access key-ul Web3Forms nu este configurat.");
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          subject: `Mesaj nou de la ${form.name} - Got Concept`,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        toast.success("Mesaj trimis! Te vom contacta în curând.");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Eroare la trimitere. Încearcă din nou.");
+      }
+    } catch {
+      toast.error("Eroare de conexiune. Încearcă din nou.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -73,9 +106,10 @@ const ContactSection = () => {
             
             <button
               type="submit"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-display font-semibold text-sm hover:opacity-90 transition-opacity glow-shadow w-full justify-center">
+              disabled={isLoading}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-display font-semibold text-sm hover:opacity-90 transition-opacity glow-shadow w-full justify-center disabled:opacity-50">
               
-              Trimite Mesajul <ArrowRight size={16} />
+              {isLoading ? <><Loader2 size={16} className="animate-spin" /> Se trimite...</> : <>Trimite Mesajul <ArrowRight size={16} /></>}
             </button>
           </motion.form>
         </div>
