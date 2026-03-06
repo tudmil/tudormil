@@ -106,9 +106,10 @@ const ContactSection = () => {
             
             <button
               type="submit"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-display font-semibold text-sm hover:opacity-90 transition-opacity glow-shadow w-full justify-center">
+              disabled={isLoading}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-display font-semibold text-sm hover:opacity-90 transition-opacity glow-shadow w-full justify-center disabled:opacity-50">
               
-              Trimite Mesajul <ArrowRight size={16} />
+              {isLoading ? <><Loader2 size={16} className="animate-spin" /> Se trimite...</> : <>Trimite Mesajul <ArrowRight size={16} /></>}
             </button>
           </motion.form>
         </div>
