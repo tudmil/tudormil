@@ -37,7 +37,7 @@ const AboutSection = () => {
             
             {[
             { label: "Fondată", value: "2021" },
-            { label: "ȚARA", value: "BUC" },
+            { label: "ORAȘ", value: "BUC" },
             { label: "Platforme", value: "IG · TT · FB · YT" }].
             map((item) =>
             <div
