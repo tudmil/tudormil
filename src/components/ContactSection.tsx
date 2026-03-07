@@ -3,7 +3,7 @@ import { ArrowRight, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "f7153d35-2cd4-4160-9cd9-0bb64554e194";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -12,10 +12,6 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
-      toast.error("Access key-ul Web3Forms nu este configurat.");
-      return;
-    }
 
     setIsLoading(true);
     try {
