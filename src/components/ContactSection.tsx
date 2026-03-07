@@ -12,10 +12,6 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
-      toast.error("Access key-ul Web3Forms nu este configurat.");
-      return;
-    }
 
     setIsLoading(true);
     try {
