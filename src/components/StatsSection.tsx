@@ -1,35 +1,21 @@
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useInView, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Eye, Users, Zap, TrendingUp } from "lucide-react";
 
-interface AnimatedCounterProps {
-  target: number;
-  suffix?: string;
-  prefix?: string;
-  duration?: number;
-}
-
-const AnimatedCounter = ({ target, suffix = "", prefix = "", duration = 2 }: AnimatedCounterProps) => {
+const AnimatedCounter = ({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) => {
   const [value, setValue] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
-  const hasAnimated = useRef(false);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          const motionVal = useMotionValue(0);
-          const unsubscribe = motionVal.on("change", (v) => setValue(Math.round(v)));
-          animate(motionVal, target, { duration, ease: "easeOut" });
-          return () => unsubscribe();
-        }
-      },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [target, duration]);
+    if (!inView) return;
+    const controls = animate(0, target, {
+      duration: 2,
+      ease: "easeOut",
+      onUpdate: (v) => setValue(Math.round(v)),
+    });
+    return () => controls.stop();
+  }, [inView, target]);
 
   return (
     <span ref={ref}>
@@ -39,10 +25,10 @@ const AnimatedCounter = ({ target, suffix = "", prefix = "", duration = 2 }: Ani
 };
 
 const stats = [
-  { icon: Eye, value: 800, suffix: "K+", label: "Vizualizări Generate", prefix: "" },
-  { icon: Users, value: 10, suffix: "+", label: "Branduri Partenere", prefix: "" },
-  { icon: Zap, value: 150, suffix: "+", label: "Proiecte Livrate", prefix: "" },
-  { icon: TrendingUp, value: 95, suffix: "%", label: "Rată de Retenție", prefix: "" },
+  { icon: Eye, value: 800, suffix: "K+", label: "Vizualizări Generate" },
+  { icon: Users, value: 10, suffix: "+", label: "Branduri Partenere" },
+  { icon: Zap, value: 150, suffix: "+", label: "Proiecte Livrate" },
+  { icon: TrendingUp, value: 95, suffix: "%", label: "Rată de Retenție" },
 ];
 
 const StatsSection = () => {
@@ -61,7 +47,7 @@ const StatsSection = () => {
             >
               <stat.icon className="mx-auto mb-4 text-primary" size={24} />
               <p className="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">
-                <AnimatedCounter target={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
+                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
               </p>
               <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest font-display">
                 {stat.label}
