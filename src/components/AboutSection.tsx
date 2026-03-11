@@ -11,7 +11,7 @@ const AboutSection = () => {
             viewport={{ once: true }}>
             
             <p className="text-primary font-display text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-              Despre Flare
+              Despre Got Concept
             </p>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
               Creați pentru{" "}
